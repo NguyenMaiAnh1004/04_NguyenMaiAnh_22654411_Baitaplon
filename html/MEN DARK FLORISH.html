@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT_fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #f7f5f5;
+        }
+        header {
+            width:100%;
+            height:100px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family:font_strong;
+            background-color: #000;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-style: italic;
+            color: #ffffff;
+            text-align: center;
+            margin-left: 130px;
+        }
+
+        nav ul {
+            font-size: 15px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            margin-left: 130px;
+        }
+        nav li {
+            margin-right: 80px;
+           
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+        nav a:hover{
+            color: #ffc107;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #search-input {
+            padding: 10px;
+            border: 1px solid #0e0d0d;
+            border-radius: px;
+            width: 150px;
+        }
+
+        button {
+            background-color: #696262;
+            color: back;
+            border: none;
+            padding: 11px;
+            cursor: pointer;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 20px;
+            padding-right: 30px;
+        }
+
+        .cart-count {
+            position: absolute;
+            background-color: black;
+            color: white;
+            padding: 1px;
+            font-size: 10px;
+        }
+        .order-button {
+            background-color: #ffc107;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            margin-right: 130px;
+
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width:80%;
+        }
+        .hero img{
+            margin-left: 100px; 
+            padding-top: 80px; 
+        }
+
+        .hero-text {
+            width: 50%;
+            flex: 1;
+            margin-left: 750px;
+            position:absolute;
+            top:250px;
+            color:#000;
+            float:left;
+            padding-top: 10px; 
+          
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-family:font_strong;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .readmore{
+            background-color: #ffc107;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 100px;
+            text-decoration: none;
+        }
+        .row{
+            color: #000;
+        }
+        .row h4{
+            color: #ffc107;
+            font-family:font_strong;
+        }
+        .row button{
+            color: #000000;
+            background-color: #ffc107;
+        }
+        .footer_area {
+            background: #101010;
+            overflow: hidden;
+            padding: 30px 0;
+        }
+        .footer_wd_inner {
+        margin-bottom: -30px;
+        }
+        .row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        .footer_wd_inner .col-6 {
+        margin-bottom: 30px;
+        }
+        .col-6 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .f_title h3 {
+            color: #fff;
+            font-family: "Playfair Display", serif;
+            font-weight: bold;
+            font-size: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 0px;
+        }
+        .list_style {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        .f_link_widget .list_style li {
+            margin-bottom: 10px;
+        }
+        .footer_wd_inner .col-6 {
+        margin-bottom: 30px;
+        }
+        .col-6 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .footer_wd_inner .col-6 {
+            margin-bottom: 30px;
+        }
+        .f_contact_widget h4 {
+            font-size: 18px;
+            color: #a8a8a8;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .f_contact_widget p {
+            font-size: 14px;
+            line-height: 26px;
+            color: #a8a8a8;
+            font-family: "Open Sans", sans-serif;
+            margin-bottom: 0px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .f_contact_widget h5 {
+            font-size: 14px;
+            line-height: 26px;
+            color: #a8a8a8;
+            font-family: "Open Sans", sans-serif;
+            margin-bottom: 0px;
+        }
+        .list_style {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        dl, ol, ul {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .f_contact_widget ul li {
+            margin-bottom: 10px;
+        }
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+        .f_contact_widget ul li a {
+            font-size: 14px;
+            line-height: 26px;
+            color: #a8a8a8;
+            font-family: "Open Sans", sans-serif;
+        }
+        .wrapper {            
+            height: 700px;
+        }
+        .footer_area {
+            background: #101010;
+            overflow: hidden;
+            padding: 30px 0;
+            color: #fcf7f7;
+            font-size: 15px;
+    
+        }
+        .footer_area p {
+            color: #fcf7f7;
+            position: relative;
+            left:100px;
+        }
+
+
+    </style>
+        <script>
+        $(document).ready(function() {
+            $("#btnOpen").click(function(e) {
+                $("#myModal").modal();
+            });
+        });
+        </script>
+</head>
+<body>   
+    <header>
+        <div class="logo">Fashion_&_Trendy</div>
+        <nav class="navbar navbar-expand">
+          <ul class="navbar-nav">
+              <li class="nav-item"><a href="home.html" class="nav-link">HOME</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="menu.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                      SERVICES
+                  </a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="menu.html" id="btnOpen">Order</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="menu.html" id="btnOpen">Classic</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="menu.html">Trendy</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="menu.html">Accessory</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    CONTACT
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="about.html">About</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="book.html">Phone</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    REGISTER
+                </a>
+                <div class="dropdown-menu"> 
+                    <a class="dropdown-item" href="dangky.html" id="btnOpen">Log in</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="dangnhap.html">Sign in</a>
+                </div>
+            </li>
+              <li class="nav-item"><a href="book.html" class="nav-link">WITH US</a></li>
+          </ul>
+      </nav>
+
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm..." id="search-input">
+            <button onclick="searchProduct()"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+
+        <script>
+                function searchProduct() {
+                    const query = document.getElementById('search-input').value;
+                    console.log("Tìm kiếm sản phẩm: " + query);
+                }
+                function toggleCart() {
+                    // Hiển thị hoặc ẩn giỏ hàng
+                    console.log("Giỏ hàng được hiển thị/ẩn");
+                }
+        </script>
+
+    </header>
+<div class="wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1> MEN DARK FLORISH</h1>     
+            <p>155,000 VND</p>       
+            <p><i>  MEN DARK FLORISH là lựa chọn lý tưởng để bạn tỏa sáng trong những ngày trời chuyển lạnh. Với thiết kế áo gile, thoải mái và chất liệu vải sợi len, mang đến cảm giác dễ chịu, thoáng mát suốt cả ngày dài. Kiểu dáng đa dạng giúp bạn dễ dàng lựa chọn phong cách phù hợp. Sự kết hợp giữa màu sắc tươi sáng và họa tiết sống động làm tăng thêm vẻ trẻ trung, năng động, hoàn hảo cho những buổi dạo phố hay du lịch.</i></p>
+            <p> Size: S M L </p>
+            <td><button onclick="addToCart('Bosch', 325000)">Thêm vào giỏ</button></td>
+            <hr>
+            <a href="menu.html" class="Back">Back to Menu</a>
+        </div>
+        <div>
+            <img src="img/product-item-6 (1).jpg" alt="MEN DARK FLORISH"  width="90%" height="600px">
+        </div>
+        <div class="row">
+            <div class="modal fade " id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Order</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="forsdt">Telephone</label>
+                                    <input type="text" class="form-control" id="txtsdt" aria-describedby="txtmasv">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Forem">Email</label>
+                                    <input type="text" class="form-control" id="txtem">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Order</button>
+                            <button type="button" class="btn btn-primary">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+</div>
+<footer class="footer_area">
+    <p>Nguyen Mai Anh &nbsp; MSSV: 22654411 &nbsp;DHTMDT18B_DaiHocCongNghiepTp.HCM&nbsp;Email:&nbsp;daina1004@gmail.com</p>
+</footer>
+</body>
+</html>

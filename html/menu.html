@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+     
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.querySelector('.cart-count').textContent = cartCount;
+        }
+
+       
+        function addToCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const productName = 'SOFT LEATHER JACKETS';
+            const productPrice = 325000;
+
+            let productIndex = cart.findIndex(item => item.name === productName);
+
+            if (productIndex !== -1) {
+                cart[productIndex].quantity += 1; 
+            } else {
+                cart.push({ name: productName, price: productPrice, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart)); 
+            updateCartCount(); 
+
+            window.location.href = 'gio hang.html'; 
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+    </script>
+   
+
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #f7f5f5;
+        }
+        header {
+            width:100%;
+            height:100px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family:font_strong;
+            background-color: #000;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-style: italic;
+            color: #ffffff;
+            text-align: center;
+            margin-left: 130px;
+        }
+
+        nav ul {
+            font-size: 15px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            margin-left: 130px;
+        }
+        nav li {
+            margin-right: 80px;
+           
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+        nav a:hover{
+            color: #ffc107;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #search-input {
+            padding: 10px;
+            border: 1px solid #0e0d0d;
+            border-radius: px;
+            width: 150px;
+        }
+
+        button {
+            background-color: #696262;
+            color: back;
+            border: none;
+            padding: 11px;
+            cursor: pointer;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 20px;
+            padding-right: 30px;
+        }
+
+        .cart-count {
+            position: absolute;
+            background-color: black;
+            color: white;
+            padding: 1px;
+            font-size: 10px;
+        }
+        .order-button {
+            background-color: #ffc107;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            margin-right: 130px;
+
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            width:80%;
+        }
+
+        .hero-text {
+            flex: 1;
+            margin-right: 50px;
+            position:absolute;
+            top:250px;
+
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family:font_strong;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .footer_area {
+            background: #101010;
+            overflow: hidden;
+            padding: 30px 0;
+            width:1500px;
+        }
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+            
+        .col-md-4 {
+            flex: 0 0 auto;
+            width: 33.33333333%;
+        }
+        section {
+            display: block;
+            unicode-bidi: isolate;
+        }
+        /* Tạo container sản phẩm */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Cài đặt cho mỗi sản phẩm */
+        .product-item {
+            width: 48%;
+            margin: 1%;
+            border: 1px solid #c50d0d;
+            padding: 10px;
+            box-sizing: border-box;
+            color: #440101;
+            text-align: center;
+        }
+        .product-item p{
+            text-align: center;
+            display: block;
+            color: #440101;
+        }
+        /* Định dạng hình ảnh và tên sản phẩm */
+        .product-item img {
+            width: 70%;
+            height: 600px;
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+            display: block;
+        }
+
+        .product-item h3 {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #440101;
+        }
+
+        .product-item button {
+            background-color: #d57a7a;
+            border: 1px solid #440101;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .news-link {
+            display: block;
+            margin-top: 10px;
+            color: #03540c;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .news-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+                text-align: center;
+                padding: 10px 0;
+                background-color: #2fb434;
+                color: #fff;
+                position: fixed;
+                width: 100%;
+                bottom: 0;}
+        .cart-icon {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                display: flex;
+                align-items: center;}
+        .cart-icon img {
+                width: 40px;
+                margin-right: 5px;
+        }
+        .back p{
+                position: relative;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                left:70px;
+        }
+        .back p a{
+                position: relative;
+                color: #cb1818;
+                align-items: center;
+                left:70px;
+        }
+        
+        </style>
+            <script>
+            $(document).ready(function() {
+                $("#btnOpen").click(function(e) {
+                    $("#myModal").modal();
+                });
+            });
+            </script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">Fashion_&_Trendy</div>
+        <nav class="navbar navbar-expand">
+          <ul class="navbar-nav">
+              <li class="nav-item"><a href="home.html" class="nav-link">HOME</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="menu.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                      SERVICES
+                  </a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="menu.html" id="btnOpen">Order</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="menu.html" id="btnOpen">Classic</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="menu.html">Trendy</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="menu.html">Accessory</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    CONTACT
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="about.html">About</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="book.html">Phone</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    REGISTER
+                </a>
+                <div class="dropdown-menu"> 
+                    <a class="dropdown-item" href="dangky.html" id="btnOpen">Log in</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="dangnhap.html">Sign in</a>
+                </div>
+            </li>
+              <li class="nav-item"><a href="book.html" class="nav-link">WITH US</a></li>
+          </ul>
+      </nav>
+
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm..." id="search-input">
+            <button onclick="searchProduct()"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+
+        <script>
+                function searchProduct() {
+                    const query = document.getElementById('search-input').value;
+                    console.log("Tìm kiếm sản phẩm: " + query);
+                }
+                function toggleCart() {
+                    // Hiển thị hoặc ẩn giỏ hàng
+                    console.log("Giỏ hàng được hiển thị/ẩn");
+                }
+        </script>
+
+    </header>
+
+<div class="wrapper">
+
+    <h3 style="color:#101010; text-align: center; font-family: 'Great Vibes';">Danh mục sản phẩm</h3>
+
+    <div class="product-container">
+        <!-- Sản phẩm 1 -->
+        <div class="product-item">
+            <img src="img/1.jpg" alt="Jackets" >
+            <h3>SOFT LEATHER JACKETS</h3>
+            <p>325,000 VND</p>
+            <td><button onclick="addToCart('Bosch', 325000)">Thêm vào giỏ</button></td>
+            <a href="jackets.html" class="news-link">Xem tin tức về sản phẩm</a>
+        </div>
+
+        <!-- Sản phẩm 2 -->
+        <div class="product-item">
+            <img src="IMG/product-item-5.jpg" alt="COTTON OFF-WHITE SHIRT" >
+            <h3>COTTON OFF-WHITE SHIRT</h3> 
+            <p>390,000 VND</p>                       
+            <td><button onclick="addToCart('Tủ lạnh LG Inverter', 390000)">Thêm vào giỏ</button></td>
+            <a href="COTTON OFF-WHITE SHIRT.HTML" class="news-link">Xem tin tức về sản phẩm</a>
+        </div>
+
+        
+    </div>
+
+    <div class="product-container">
+        <!-- Sản phẩm 3-->
+        <div class="product-item">
+            <img src="img/product-item-6 (1).jpg" alt="MEN DARK FLORISH" >
+            <h3> MEN DARK FLORISH</h3>     
+            <p>155,000 VND</p>
+            <td><button onclick="addToCart('Điều hòa DAIKIN', 155000)">Thêm vào giỏ</button></td>
+            <a href="MEN DARK FLORISH.html" class="news-link">Xem tin tức về sản phẩm</a>
+        </div>
+
+        <!-- Sản phẩm 4 -->
+        <div class="product-item">
+            <img src="img/4.jpg" alt="BAGGY SHIRT">
+            <h3>BAGGY SHIRT</h3>    
+            <p>139,000 VND</p>
+            <td><button onclick="addToCart('Tivi Sony 4K', 139000)">Thêm vào giỏ</button></td>
+            <a href="4.html" class="news-link">Xem tin tức về sản phẩm</a>
+        </div>
+    </div>
+
+    <div class="product-container">
+        <!-- Sản phẩm 5-->
+        <div class="product-item">
+            <img src="img/product-item-9.jpg" alt="DARK FLORISH ONEPIECE">
+            <h3>DARK FLORISH ONEPIECE</h3>  
+            <p>199,000 VND</p>
+            <td><button onclick="addToCart('Máy xay cafe HC600', 199000)">Thêm vào giỏ</button></td>
+            <a href="DARK FLORISH ONEPIECE.html" class="news-link">Xem tin tức về sản phẩm</a>
+        </div>
+
+        <!-- Sản phẩm 6 -->
+        <div class="product-item">
+            <img src="img/product-item-6.jpg" alt="HANMADE CROP SWEATER">
+            <h3>HANMADE CROP SWEATER</h3>
+            <p>629,000 VND</p>
+            <td><button onclick="addToCart('Máy xay sinh tố', 629000)">Thêm vào giỏ</button></td>
+            <a href="HANMADE CROP SWEATER.html" class="news-link">Xem tin tức về sản phẩm</a>
+        </div>
+    </div>
+
+    <div class="back">
+        <p><a class="back-link" href="home.html">Back to HOME</a></p>
+        <p><a class="back-link" href="menu.html">Back to MENU</a></p>
+        <p><a class="back-link" href="readmore.html">Read more about US</a></p>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <footer class="footer_area">
+        <p>Nguyen Mai Anh &nbsp; &nbsp;MSSV: 22654411&nbsp; &nbsp;DHTMDT18B_DaiHocCongNghiepTp.HCM&nbsp;&nbsp;Email:&nbsp;daina1004@gmail.com</p>
+    </footer>
+</div>
+ </body>
+</html>

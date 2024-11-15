@@ -118,7 +118,113 @@
         h2 {
             margin-bottom: 20px;
         }
+        .footer_area {
+            background: #101010;
+            overflow: hidden;
+            padding: 30px 0;
+        }
+        .footer_wd_inner {
+        margin-bottom: -30px;
+        }
+        .row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        .footer_wd_inner .col-6 {
+            margin-bottom: 30px;
+        }
+        .col-6 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .f_title h3 {
+            color: #fff;
+            font-family: "Playfair Display", serif;
+            font-weight: bold;
+            font-size: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 0px;
+        }
+        .list_style {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        .f_link_widget .list_style li {
+            margin-bottom: 10px;
+        }
+        .footer_wd_inner .col-6 {
+        margin-bottom: 30px;
+        }
+        .col-6 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .footer_wd_inner .col-6 {
+            margin-bottom: 30px;
+        }
+        .f_contact_widget h4 {
+            font-size: 18px;
+            color: #a8a8a8;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .f_contact_widget p {
+            font-size: 14px;
+            line-height: 26px;
+            color: #a8a8a8;
+            font-family: "Open Sans", sans-serif;
+            margin-bottom: 0px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .f_contact_widget h5 {
+            font-size: 14px;
+            line-height: 26px;
+            color: #a8a8a8;
+            font-family: "Open Sans", sans-serif;
+            margin-bottom: 0px;
+        }
+        .list_style {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        dl, ol, ul {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
 
+        .f_contact_widget ul li {
+            margin-bottom: 10px;
+        }
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+        .f_contact_widget ul li a {
+            font-size: 14px;
+            line-height: 26px;
+            color: #a8a8a8;
+            font-family: "Open Sans", sans-serif;}
 </style>
 <body>
     <header>
@@ -133,11 +239,11 @@
                   <div class="dropdown-menu">
                       <a class="dropdown-item" href="menu.html" id="btnOpen">Order</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="menu.html" id="btnOpen">Classic</a>
+                      <a class="dropdown-item" href="menu_ass.html" id="btnOpen">Classic</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="menu.html">Trendy</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="menu.html">Accessory</a>
+                      <a class="dropdown-item" href="menu_ass.html">Accessory</a>
                   </div>
               </li>
               <li class="nav-item dropdown">
@@ -198,5 +304,48 @@
         </form>
         <p>Đã có tài khoản? <a href="dangnhap.html">Đăng Nhập</a></p>
     </div>
+
+    <footer class="footer_area">
+        <div class="footer_widgets">
+            <div class="container">
+                <div class="row footer_wd_inner">  
+                    <div class="col-lg-3 col-6">
+                        <aside class="f_widget f_link_widget">
+                            <div class="f_title">
+                                <h3>Quick links</h3>
+                            </div>
+                            <ul class="list_style">
+                                <li><a href="home.html">Your Account</a></li>
+                                <li><a href="menu.html">View Order</a></li>
+                                <li><a href="about.html">Contact</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <aside class="f_widget f_link_widget">
+                            <div class="f_title">
+                                <h3>Work Times</h3>
+                            </div>
+                            <ul class="list_style">
+                                <li><a href="#">Mon. :  Fri.: 8 am - 8 pm</a></li>
+                                <li><a href="#">Sat. : 9am - 4pm</a></li>
+                                <li><a href="#">Sun. : Closed</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <aside class="f_widget f_contact_widget">
+                            <div class="f_title">
+                                <h3>Contact Info</h3>
+                            </div>
+                            <h4>Nguyễn Mai Anh </h4>
+                            <p>MSSV: 22654411<br>DHTMDT18B_DaiHocCongNghiepTp.HCM</p>
+                            <h5>daina1004@gmail.com</h5>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </footer>
 </body>
 </html>
